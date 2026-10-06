@@ -2,4 +2,12 @@ venv/
 __pycache__/
 *.pyc
 .dvc/cache/
+.dvc/tmp/
 *.h5
+data/raw/
+data/processed/
+models/
+confusion_matrix.png
+credentials.json
+client_secrets.json
+*.token
