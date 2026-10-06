@@ -1,2 +1,2 @@
-A modular TensorFlow Artificial Neural Network pipeline for Fashion-MNIST using Git and DVC.
-
+# Fashion-MNIST ANN Pipeline
+A modular TensorFlow Artificial Neural Network (ANN) pipeline for Fashion-MNIST classification using Git, DVC, and Google Drive remote storage.
