@@ -15,8 +15,11 @@ def main():
     x_test = np.load("data/raw/x_test.npy")
     y_test = np.load("data/raw/y_test.npy")
 
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    # Teammate-sim normalization: Z-score standardization
+    mean = np.mean(x_train, axis=(0, 1, 2), keepdims=True)
+    std = np.std(x_train, axis=(0, 1, 2), keepdims=True) + 1e-7
+    x_train = (x_train.astype("float32") - mean) / std
+    x_test = (x_test.astype("float32") - mean) / std
 
     x_train, x_val, y_train, y_val = train_test_split(
         x_train,
